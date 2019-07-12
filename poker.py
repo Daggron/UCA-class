@@ -26,7 +26,7 @@ def kind(n, rank):
 
 def two_pair(el):
     hicard = kind(2, el)
-    locard = kind(2, reversed(el))
+    locard = kind(2, list(reversed(el)))
 
     if hicard != locard:
         return (hicard, locard)
@@ -37,3 +37,7 @@ print(straight(ranks))
 print(flush(suits))
 print(kind(3,k))
 print(two_pair(k))
+
+
+if __name__ == '__main__':
+    assert (straight([6, 5, 2, 1, 6]) == False)
