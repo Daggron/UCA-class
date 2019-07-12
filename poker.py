@@ -33,9 +33,19 @@ def two_pair(el):
     return None
 
 
+def card_ranks(hand):
+   card_value = ['--23456789TJQK'.index(r) for r, s in hand]
+   ranks.sort(reverse = True)
+   return card_value
+
+
+def card_suits(hand):
+    return [s for r, s in hand]
+
+
 print(straight(ranks))
 print(flush(suits))
-print(kind(3,k))
+print(kind(3, k))
 print(two_pair(k))
 
 
